@@ -9,8 +9,8 @@ import numpy as np
 sys.path.append(os.path.realpath(os.path.dirname(__file__) + "/../"))
 from src.transformer import (
     lla_to_eci,
-    simulation_time_to_julian_day,
-    simulation_time_to_datetime_utc
+    simulation_time_to_datetime_utc,
+    simulation_time_to_julian_day
 )
 
 # Примерный радиус Земли на экваторе, км.
