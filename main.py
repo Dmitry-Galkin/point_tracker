@@ -3,7 +3,7 @@
 from src.simulation import Simulation
 
 # Время моделирования, с.
-SIMULATION_TIME = 60
+SIMULATION_TIME = 86400
 # Шаг моделирования, с.
 TIME_STEP = 60
 # Учет возмущений.
