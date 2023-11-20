@@ -1,7 +1,7 @@
 .*
 !.gitignore 
-!.gitkeep
+!results/.gitkeep
+results/*.txt
 __*
 venv
-*.ipynb
 
