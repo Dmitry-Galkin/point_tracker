@@ -1,4 +1,4 @@
-"""Тестирование модуля transformer."""
+"""Тестирование модуля frames."""
 
 import os
 import sys
@@ -8,7 +8,7 @@ import numpy as np
 import pytest
 
 sys.path.append(os.path.realpath(os.path.dirname(__file__) + "/../"))
-from src.frames import (lla_to_eci, target_frame)
+from src.frames import lla_to_eci, target_frame
 
 # Примерный радиус Земли на экваторе, км.
 EARTH_RADIUS_EQUATOR = 6378
