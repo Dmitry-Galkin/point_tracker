@@ -38,6 +38,8 @@ def test_target_quaternion_calculation():
     sim.init_orbit()
 
     for _ in np.arange(0, SIMULATION_TIME + TIME_STEP, TIME_STEP):
+
+        # Построение ССК.
         tf = sim.build_target_frame()
 
         # Поиск собственного вектора, соответствующего собственному числу = 1.
@@ -47,10 +49,15 @@ def test_target_quaternion_calculation():
 
         quat = Quaternion(sim.target_quaternion(tf))
 
+        # Ось X ССК.
         assert np.allclose(tf[0], quat.rotate((1, 0, 0)))
+        # Ось Y ССК.
         assert np.allclose(tf[1], quat.rotate((0, 1, 0)))
+        # Ось Z ССК.
         assert np.allclose(tf[2], quat.rotate((0, 0, 1)))
+        # Собственный вектор.
         assert np.allclose(eigenvector, quat.rotate(eigenvector))
+        # Норма кватерниона = 1.
         assert np.isclose(1, np.linalg.norm(sim.target_quaternion(tf)))
 
         sim.orbit.step(time_step=TIME_STEP)
