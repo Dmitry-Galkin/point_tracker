@@ -27,7 +27,7 @@ sys.path.append(os.path.realpath(os.path.dirname(__file__) + "/../"))
 from src.simulation import Simulation
 
 TIME_STEP = 30
-SIMULATION_TIME = 5400
+SIMULATION_TIME = 86400
 
 
 @pytest.mark.slow
